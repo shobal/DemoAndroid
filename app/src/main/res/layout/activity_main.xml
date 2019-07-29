@@ -8,8 +8,9 @@
         tools:context=".MainActivity">
 
     <com.demo.android.DemoCanvasView
+            android:layout_centerInParent="true"
             android:layout_width="300dp"
-            android:layout_height="600dp"
+            android:layout_height="500dp"
             android:background="@color/color_red"/>
 
 </RelativeLayout>

@@ -19,7 +19,7 @@ class DemoCanvasView(context: Context?) : View(context) {
 
 //        textBase(canvas!!)
 
-//        drawTextDemo(canvas)
+        drawTextDemo(canvas)
 
         /*//drawText,绘制居中文字
         drawCenter(canvas)
@@ -37,7 +37,7 @@ class DemoCanvasView(context: Context?) : View(context) {
 
 //        drawPicture(canvas)
 
-        drawBitmapMesh(canvas)
+//        drawBitmapMesh(canvas)
     }
 
     //绘制时候改变坐标
@@ -300,7 +300,7 @@ class DemoCanvasView(context: Context?) : View(context) {
         })
 
         //bottom 正
-        canvas?.drawLine(120f, y + p.fontMetrics.bottom + 8, 500f, y + p.fontMetrics.bottom + 8, Paint().apply {
+        canvas?.drawLine(120f, y + p.fontMetrics.bottom, 500f, y + p.fontMetrics.bottom, Paint().apply {
             isAntiAlias = true
             color = Color.GRAY
             strokeWidth = 5f
