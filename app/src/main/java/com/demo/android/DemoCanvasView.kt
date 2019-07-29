@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 
+
 class DemoCanvasView(context: Context?) : View(context) {
 
     constructor(context: Context, attrs: AttributeSet) : this(context)
@@ -19,7 +20,7 @@ class DemoCanvasView(context: Context?) : View(context) {
 
 //        textBase(canvas!!)
 
-        drawTextDemo(canvas)
+//        drawTextDemo(canvas)
 
         /*//drawText,绘制居中文字
         drawCenter(canvas)
@@ -33,7 +34,7 @@ class DemoCanvasView(context: Context?) : View(context) {
         //绘制弧形
 //        drawPathArc(canvas)
 
-//        drawBitmap(canvas)
+        drawBitmap(canvas)
 
 //        drawPicture(canvas)
 
@@ -131,11 +132,17 @@ class DemoCanvasView(context: Context?) : View(context) {
 
         })
 
-/*        val size = 40
-        canvas.drawBitmapMesh(
-            bitmap, size, size, FloatArray((size + 1) * (size + 1) * 2),
-            0, IntArray((size + 1) * (size + 1) * 2), 0, null
-        )*/
+
+        /**
+         *矩阵
+         */
+        val matrix = Matrix()
+        matrix.postScale(0.5f, 0.5f)// 使用后乘
+        matrix.postRotate(30f)
+        matrix.postTranslate(50f, 50f)
+        canvas.drawBitmap(bitmap, matrix, Paint().apply {
+
+        })
     }
 
     fun drawTextRun(canvas: Canvas) {
